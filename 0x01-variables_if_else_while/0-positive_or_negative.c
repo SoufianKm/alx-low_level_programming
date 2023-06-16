@@ -5,10 +5,10 @@
 /**
  * main - Entry point
  *
- * This function should print the number 
+ * This function should print the number
  * with is negative or positive or equal to 0
  *
- * Return : Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 /* betty style doc for function main goes there */
 int main(void)
