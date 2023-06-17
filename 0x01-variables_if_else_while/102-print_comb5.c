@@ -21,7 +21,7 @@ int main(void)
 		{
 			for (k = 0; k < 10; k++)
 			{
-				l = i + 1;
+				l = k + 1;
 				while (l < 10)
 				{
 					putchar('0' + i);
