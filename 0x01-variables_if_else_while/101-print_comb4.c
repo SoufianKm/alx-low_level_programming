@@ -20,7 +20,7 @@ int main(void)
 		j = i + 1;
 		while (j < 10)
 		{
-			k = j + 1 ;
+			k = j + 1;
 			while (k < 10)
 			{
 				putchar('0' + i);
