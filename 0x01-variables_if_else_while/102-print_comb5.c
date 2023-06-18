@@ -19,9 +19,9 @@ int main(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			for (k = 0; k < 10; k++)
+			l = j + 1;
+			for (k = i; k < 10; k++)
 			{
-				l = k + 1;
 				while (l < 10)
 				{
 					putchar('0' + i);
@@ -29,13 +29,13 @@ int main(void)
 					putchar(' ');
 					putchar('0' + k);
 					putchar('0' + l);
-					if (j < 8)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					if (i == 9 && j == 8 && k == 9 && l == 9)
+						break;
+					putchar(',');
+					putchar(' ');
 					l++;
 				}
+				l = 0;
 			}
 		}
 	}
