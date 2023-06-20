@@ -26,5 +26,5 @@ int print_sign(int n)
 		_putchar('+');
 		res = 1;
 	}
-	return res;
+	return (res);
 }
