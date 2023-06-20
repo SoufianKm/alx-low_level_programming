@@ -5,7 +5,13 @@
 /**
  * jack_bauer - print every minute
  * of the day of Jack Bauer
- */
+ *
+ * getFirstDigit - return the first digit of
+ * a number given
+ *
+ * getLastDigit - return the last digit of
+ * number given
+*/
 
 void jack_bauer(void)
 {

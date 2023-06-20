@@ -28,5 +28,7 @@ int print_last_digit(int n);
 
 /*-----8-24_hours.c-----*/
 void jack_bauer(void);
+int getFirstDigit(int n);
+int getastDigit(int n);
 
 #endif
