@@ -1,3 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef MAIN.H
+#define MAIN.H
+
+/*---_putchar--*/
+int _putchar(c);
+#endif
