@@ -15,7 +15,10 @@ void print_alphabet(void)
 {
 	char c = 'a';
 
-	for(int a = c; a <='z'; a++)
-		_putchar(a);
+	while(c <='z')
+	{
+		_putchar(c);
+		c++;
+	}
 	_putchar('\n');
 }
