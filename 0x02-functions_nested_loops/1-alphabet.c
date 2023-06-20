@@ -6,8 +6,8 @@
 /**
  * main - Entry point
  *
- * This function "print_alphabet" used to print alphabet
- * in lowercase using prototype and the function _putchar
+ * print_alphabet used to print alphabet
+ * in lowercase
  *
  * Return: Always 0 (Success)
  */
