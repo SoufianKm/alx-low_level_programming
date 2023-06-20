@@ -19,8 +19,7 @@ void jack_bauer(void)
 			{
 				_putchar('0');
 				_putchar('0' + h);
-			}
-			else
+			} else
 			{
 				_putchar('0' + (h / 10));
 				_putchar('0' + (h % 10));
@@ -30,7 +29,7 @@ void jack_bauer(void)
 			{
 				_putchar('0');
 				_putchar('0' + m);
-			}else
+			} else
 			{
 				_putchar('0' + (m / 10));
 				_putchar('0' + (m % 10));
