@@ -4,10 +4,7 @@
 #include "main.h"
 
 /**
- *
- * print_alphabet used to print alphabet
- * in lowercase
- *
+ * print_alphabet: used to print alphabet in lowercase
  */
 void print_alphabet(void)
 {
