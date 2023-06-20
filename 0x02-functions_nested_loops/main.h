@@ -4,7 +4,7 @@
 /*-----_putchar-----*/
 int _putchar(char);
 
-/*-----print alphabet-----*/
+/*-----1-print_alphabet.c-----*/
 void print_alphabet(void);
 
 #endif
