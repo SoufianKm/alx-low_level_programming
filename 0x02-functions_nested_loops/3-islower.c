@@ -4,6 +4,7 @@
 
 /**
  * _islower - checks for lowercase character
+ * for parametre 'c' given
  */
 int _islower(char c)
 {
