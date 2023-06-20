@@ -12,18 +12,5 @@
 int add(int a, int b)
 {
 	int res = a + b;
-
-	if (res < 0)
-	{
-		_putchar('-');
-		res = labs(res);
-	}
-	while ((res / 10) > 0)
-	{
-		if (res == 0)
-			break;
-		_putchar('0' + res % 10);
-		res /= 10;
-	}
-	_putchar('\n');
+	return (res);
 }
