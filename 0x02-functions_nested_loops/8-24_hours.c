@@ -17,14 +17,14 @@ void jack_bauer(void)
 		{
 			if (h < 10)
 				_putchar('0');
-			else
-				_putchar('0' + h);
+			_putchar('0' + h);
 			_putchar(':');
 			if (m < 10)
 				_putchar('0');
-			else
-				_putchar('0' + m);
+			_putchar('0' + m);
 			_putchar('\n');
+			m++;
 		}
+		h++;
 	}
 }
