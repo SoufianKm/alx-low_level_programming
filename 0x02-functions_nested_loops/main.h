@@ -2,5 +2,5 @@
 #define MAIN_H
 
 /*---_putchar--*/
-int _putchar(c);
+int _putchar(char);
 #endif
