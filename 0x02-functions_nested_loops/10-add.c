@@ -5,7 +5,8 @@
 /**
  * add - adds two integers and returns the result
  *
- * @a, @b: parameters given
+ * @a: first integer parameter
+ * @b: seconde integer parameters
  *
  * Return: the sum of parameters
  */
