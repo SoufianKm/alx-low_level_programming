@@ -7,7 +7,7 @@
  * main - Entry point
  *
  * This function "print_alphabet" used to print alphabet
- * in lowercase using function _putchar
+ * in lowercase using prototype and the function _putchar
  *
  * Return: Always 0 (Success)
  */
@@ -15,7 +15,7 @@ void print_alphabet(void)
 {
 	char c = 'a';
 
-	while(c <= 'z')
+	while (c <= 'z')
 	{
 		_putchar(c);
 		c++;
