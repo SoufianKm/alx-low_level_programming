@@ -17,14 +17,41 @@ void jack_bauer(void)
 		{
 			if (h < 10)
 				_putchar('0');
-			_putchar(h);
+			else
+			{
+				_putchar('0' + getFirstDigit(h));
+				_putchar('0' + getLastDigit(h));
+			}
 			_putchar(':');
 			if (m < 10)
 				_putchar('0');
-			_putchar(m);
+			else
+			{
+				_putchar('0' + getFirstDigit(h));
+				_putchar('0' + getLastDigit(h));
+			}
 			_putchar('\n');
 			m++;
 		}
 		h++;
 	}
+}
+
+int getFirstDigit(int n)
+{
+	int res;
+
+	while(n >= 10)
+	{
+		res = n / 10 ;
+	}
+	return (res);
+}
+
+int getLastDigit(int n)
+{
+        int res;
+
+        res = n % 10 ;
+        return (res);
 }
