@@ -17,4 +17,7 @@ int _islower(char c);
 /*-----4-isalpha.c-----*/
 int _isalpha(char c);
 
+/*-----5-sign.c-----*/
+int print_sign(int n);
+
 #endif
