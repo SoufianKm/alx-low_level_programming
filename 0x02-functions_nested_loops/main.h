@@ -20,4 +20,7 @@ int _isalpha(char c);
 /*-----5-sign.c-----*/
 int print_sign(int n);
 
+/*-----6-abs.c-----*/
+int _abs(int n);
+
 #endif
