@@ -16,45 +16,23 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; i--)
 		{
-			int res = i;
-			
+			if (i != n && i > 99)
+				_putchar(',');
 			if (i < n)
 				_putchar(' ');
-			if (i > 99)
-				_putchar(',');
-			while (res > 0)
-			{
-				int print_digit;
-
-				if (res == 0)
-					break;
-				print_digit = res % 10;
-				res /= 10;
-				_putchar('0' + print_digit);
-
-			}
+			printf("%d", i);
 		}
+		_putchar('\n');
 	} else if (n <= 98){
 		for (i = n; i <= 98; i++)
 		{
-			int res = i;
-			
+			if (i != n && i < 99)
+				_putchar(',');
 			if (i > n)
 				_putchar(' ');
-			if (i < 97)
-				_putchar(',');
-			if (n < 0)
+			if (i < 0)
 				_putchar('-');
-			while (res > 0)
-			{
-				int print_digit;
-
-				if (res == 0)
-					break;
-				print_digit = res % 10;
-				_putchar('0' + print_digit);
-				res /= 10;
-			}
 		}
+		_putchar('\n');
 	}
 }
