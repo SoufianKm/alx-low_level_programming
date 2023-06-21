@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- * times_table - print the 9 time table
+ * print_times_table - print the n time table
+ * @n: integer parameter
  */
 void print_times_table(int n)
 {
