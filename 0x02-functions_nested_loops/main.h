@@ -38,4 +38,7 @@ int add(int a, int b);
 /*-----11-print_to_98.c-----*/
 void print_to_98(int n);
 
+/*-----100-print_times_table.c-----*/
+void print_times_table(int n);
+
 #endif
