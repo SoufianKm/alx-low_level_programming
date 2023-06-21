@@ -11,6 +11,7 @@
 void print_to_98(int n)
 {
 	int i;
+
 	if (n > 98)
 	{
 		for (i = n; i >= 98; i--)
@@ -23,10 +24,13 @@ void print_to_98(int n)
 				_putchar(',');
 			while (res > 0)
 			{
+				int print_digit;
+
 				if (res == 0)
 					break;
-				_putchar('0' + (res % 10));
+				print_digit = res % 10;
 				res /= 10;
+				_putchar('0' + print_digit);
 
 			}
 		}
@@ -43,10 +47,13 @@ void print_to_98(int n)
 				_putchar('-');
 			while (res > 0)
 			{
+				int print_digit;
+
 				if (res == 0)
 					break;
-				_putchar('0' + (res % 10));
-				res /=10;
+				print_digit = res % 10;
+				_putchar('0' + print_digit);
+				res /= 10;
 			}
 		}
 	}
