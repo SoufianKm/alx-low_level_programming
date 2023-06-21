@@ -7,11 +7,6 @@
  * to 98
  *
  * @n: integer paramter given
- *
- * printDigit - print all digits of a number
- * given in parameter
- *
- * @nbr: integer parameter 
  */
 void print_to_98(int n)
 {
@@ -30,8 +25,8 @@ void print_to_98(int n)
 			{
 				if (res == 0)
 					break;
-				res /= 10;
 				_putchar('0' + (res % 10));
+				res /= 10;
 
 			}
 		}
@@ -48,26 +43,11 @@ void print_to_98(int n)
 				_putchar('-');
 			while (res > 0)
 			{
-
 				if (res == 0)
 					break;
-				res /=10;
 				_putchar('0' + (res % 10));
+				res /=10;
 			}
 		}
 	}
 }
-
-void printDigit(int nbr)
-{
-	int res;
-
-	if (nbr == 0)
-		return;
-	res = nbr % 10;
-
-	printDigit(nbr / 10);
-
-	_putchar('0' + res);
-}
-
