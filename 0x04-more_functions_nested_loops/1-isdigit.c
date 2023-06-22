@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _isupper - checks for uppercase character
+ * _isdigit- checks for a digit through 0 - 9
  * @c: parameter given 
  * Return: 1 if c an uppercase, 0 otherwise
  */
