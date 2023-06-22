@@ -4,6 +4,7 @@
 /**
  * print_line - print '_' n times
  * using _putchar
+ * @n: integer parameter
  * _putchar - print character
  */
 void print_line(int n)
