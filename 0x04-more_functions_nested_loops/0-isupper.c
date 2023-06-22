@@ -9,12 +9,10 @@
  */
 int _isupper(int c)
 {
-	int res;
+	int res = 0;
 
 	if (isupper(c))
 		res = 1;
-	else
-		res = 0;
 
 	return (res);
 }
