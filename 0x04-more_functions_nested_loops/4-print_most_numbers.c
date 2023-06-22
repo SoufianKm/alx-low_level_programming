@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - print number from 0 to 9
+ * print_most_numbers - print number from 0 to 9
  * except 2 and 4 using _putchar
  */
 void print_most_numbers(void)
