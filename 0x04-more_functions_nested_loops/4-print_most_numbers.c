@@ -2,16 +2,15 @@
 #include <stdio.h>
 
 /**
- * print_most_numbers - print numbers from 0 to 9 except 2 and 4
- *
- * _putchar: function print character 
+ * print_most_numbers - print numbers from 0 to 9
+ * except 2 and 4, using _putchar function
  */
 
 void print_most_numbers(void)
 {
 	int n = 0;
 
-	while (n++)
+	while (n++ < 10)
 	{
 		if (n != 2 || n != 4)
 		{
