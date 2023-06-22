@@ -4,7 +4,7 @@
 
 /**
  * _isdigit- checks for a digit through 0 - 9
- * @c: parameter given 
+ * @c: parameter given
  * Return: 1 if c an uppercase, 0 otherwise
  */
 int _isdigit(int c)
