@@ -2,19 +2,28 @@
 
 int main(void)
 {
-	int i, n = 0;
+	int i, j, n = 10;
 
-        for (i = 0; i < 10; i++)
-	{       
-		while (n <= 14)
+        if (n <= 0)
+        {
+                printf("\n");
+        }
+        else
+        {
+                for (i = 0; i < n; i++)
                 {
-			if (n / 10 != 0)
-				putchar('0' + n / 10);
-                        putchar('0' + n % 10);
-                        n++;
+                        for (j = 0; j < n; j++)
+			{
+				if (i == j)
+				{
+					printf("\\");
+					break;
+				} else {
+					printf(" ");
+				}
+			}
+                        printf("\n");
                 }
-		n = 0;
-		putchar('\n');
-	}
+        }
 	return (0);
 }
