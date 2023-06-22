@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * more_numbers - print 10 times number from 0 to 14
- * using _putchar
+ * more_numbers - print 10 time numbers
+ * from 0 to 14, using _putchar
+ * _putchar - fucntion print character
  */
 void more_numbers(void)
 {
@@ -14,8 +15,8 @@ void more_numbers(void)
 		while (n <= 14)
 		{
 			if (n / 10 != 0)
-				_putchar('0' + n / 10 );
-			_putchar('0' + n % 10 );
+				_putchar('0' + n / 10);
+			_putchar('0' + n % 10);
 			n++;
 		}
 		n = 0;
