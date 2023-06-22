@@ -9,10 +9,10 @@
  */
 int _isdigit(int c)
 {
-	int res = 0;
+        int res = 0;
 
-	if(isdigit(c))
-		res = 1;
+        if (isdigit(c))
+                res = 1;
 
-	return (res);
+        return (res);
 }
