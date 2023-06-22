@@ -14,13 +14,7 @@ int main(void)
                 {
                         for (j = 0; j < n; j++)
 			{
-				if (i == j)
-				{
-					printf("\\");
-					break;
-				} else {
-					printf(" ");
-				}
+				printf("#");
 			}
                         printf("\n");
                 }
