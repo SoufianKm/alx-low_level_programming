@@ -1,2 +1,0 @@
-#!/bin/bash
-gcc -c -S -masm=intel $CFILE -o "$(basename $CFILE .c).s"
