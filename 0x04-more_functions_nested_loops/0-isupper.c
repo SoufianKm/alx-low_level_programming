@@ -12,7 +12,7 @@ int _isupper(int c)
 	int res;
 
 	if (isupper(c))
-		ret = 1;
+		res = 1;
 	else
 		res = 0;
 
