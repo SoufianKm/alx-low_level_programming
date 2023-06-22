@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
@@ -8,7 +9,7 @@
  */
 int _isupper(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (isupper(c))
 	{
 		return (1);
 	}
