@@ -9,8 +9,12 @@
  */
 int _isupper(int c)
 {
+	int res;
+
 	if (isupper(c))
-		return (1);
+		ret = 1;
 	else
-		return (0);
+		res = 0;
+
+	return (res);
 }
