@@ -3,9 +3,9 @@
 #include "main.h"
 
 /**
- * _isdigit- checks for a digit through 0 - 9
+ * _isdigit - checks for a digit through 0 - 9
  * @c: parameter given
- * Return: 1 if c an uppercase, 0 otherwise
+ * Return: 1 if c is digit, 0 otherwise
  */
 int _isdigit(int c)
 {
