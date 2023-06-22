@@ -4,8 +4,8 @@
 
 /**
  * _isdigit - checks for a digit through 0 - 9
- * @c: parameter given
- * Return: 1 if c is digit, 0 otherwise
+ * @c: integer parameter
+ * Return: 1 if c is digit, else 0
  */
 int _isdigit(int c)
 {
