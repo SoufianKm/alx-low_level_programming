@@ -2,12 +2,15 @@
 #include <ctype.h>
 
 /**
- * _isupper - function that checks for uppercase character
- * @c: character parameter
- * Return: 1 if is uppercase, 0 otherwise
+ * _isupper - checks for uppercase character
+ * @c: character parameter given 
+ * Return: 1 if uppercase, 0 otherwise
  */
 
 int _isupper(int c)
 {
-	return (isupper(c));
+	if (isupper(c));
+		return (1);
+	else
+		return (0);
 }
