@@ -18,7 +18,7 @@ int main(void)
 		res = previous_nbr + current_nbr;
 		printf("%d", res);
 
-		if (res < 50)
+		if (counter < 49)
 			printf(", ");
 
 		previous_nbr = current_nbr;
