@@ -8,7 +8,7 @@
  *
  * Return: 0 Always (Success)
  */
-int main (void)
+int main(void)
 {
 	int p_f = 0, i = 2;
 
@@ -37,6 +37,6 @@ int main (void)
 	} while (n > 1);
 	
 	printf("%d\n", p_f);
-	
+
 	return (0);
 }
