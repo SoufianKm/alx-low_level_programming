@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	int p_f = 0, i = 2;
+	int prime_factor = 0, i = 2;
 
        	long n = 612852475143;
 	
@@ -18,8 +18,8 @@ int main(void)
 		if (n % i == 0)
 			n /= i;
 		
-		if (i > p_f)
-			p_f = i;
+		if (i > prime_factor)
+			prime_factor = i;
 		
 		if (n % i == 0)
 			i = 2;
@@ -27,7 +27,7 @@ int main(void)
 			i++;
 	} while (n > 1);
 	
-	printf("%d\n", p_f);
+	printf("%d\n", prime_factor);
 
 	return (0);
 }
