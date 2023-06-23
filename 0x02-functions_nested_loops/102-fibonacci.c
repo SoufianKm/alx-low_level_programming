@@ -26,5 +26,7 @@ int main(void)
 		current_nbr = res;
 		counter++;
 	}
+	printf("\n");
+
 	return (0);
 }
