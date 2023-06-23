@@ -14,8 +14,7 @@ int main(void)
 
        	long n = 612852475143;
 	
-	do
-	{
+	do {
 		if (n % i == 0)
 		{
 			n /= i;
