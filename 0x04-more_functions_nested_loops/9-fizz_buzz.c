@@ -4,11 +4,11 @@
 /**
  * main - Entry point
  *
- * this program should print numbers
- * from 0 to 100 for :
- * numbers divided by 3 will replaced with Fizz
- * numbers devided by 5 will replaced with Buzz
- * numbers devided by 3 and 5 will replaced with FizzBuzz
+ * this program should prints the numbers from 1 to 100
+ * followed by a new line. but for multiples of three
+ * print Fizz instead of the number and for the multiples
+ * of five print Buzz. For numbers which are multiples
+ * of both three and five print FizzBuzz
  *
  * Return: 0 Always (Success)
  */
@@ -20,9 +20,9 @@ int main(void)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
 			printf("FizzBuzz");
-		else if(n % 3 == 0 && n % 5 != 0)
+		else if (n % 3 == 0 && n % 5 != 0)
 			printf("Fizz");
-		else if (n % 5 == 0 && n % 3 != 0)
+		else if (n % 5 == 0 && n % 3 != 0) 
 			printf("Buzz");
 		else
 			printf("%d", n);
