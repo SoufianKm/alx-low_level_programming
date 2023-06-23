@@ -12,7 +12,7 @@
  */
 int main(void)
 {
-	long previous_nbr = 0, current_nbr = 1, res, sum = 0;
+	long previous_nbr = 0, current_nbr = 1, res = 0, sum = 0;
 	int counter = 0;
 
 	while (res < 4000000)
