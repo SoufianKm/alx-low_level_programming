@@ -1,6 +1,6 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * print_number - print a number
@@ -11,7 +11,7 @@ void print_number(int n)
 {
 	if (n < 0)
 	{
-		n = labs(n);
+		n = abs(n);
 		_putchar('-');
 	}
 
