@@ -17,7 +17,7 @@ int main(void)
 	while (counter < 50)
 	{
 		res = previous_nbr + current_nbr;
-		printf("%d", res);
+		printf("%ld", res);
 
 		if (counter < 49)
 			printf(", ");
