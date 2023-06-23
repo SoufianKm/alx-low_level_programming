@@ -16,23 +16,15 @@ int main(void)
 	
 	do {
 		if (n % i == 0)
-		{
 			n /= i;
-		}
 		
 		if (i > p_f)
-		{
 			p_f = i;
-		}
 		
 		if (n % i == 0)
-		{
 			i = 2;
-		}
 		else
-		{
 			i++;
-		}
 	} while (n > 1);
 	
 	printf("%d\n", p_f);
