@@ -11,15 +11,19 @@
  */
 int main(void)
 {
-	int f = 1, res = 0;
+	int previous_nbr = 0, current_nbr = 1, res;
 
 	while (f <= 50)
 	{
-		res = f;
-		printf("%d", f);
+		res = previous_nbr + current_nbr;
+		printf("%d", res);
+
 		if (f < 50)
 			printf(", ");
-		f += res;
+
+		previous_nbr = current_nbr;
+		current_nbr = res;
+
 	}
 	return (0);
 }
