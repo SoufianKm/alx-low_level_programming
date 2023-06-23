@@ -5,10 +5,9 @@
  * main - Entry point
  *
  * this program should prints the numbers from 1 to 100
- * followed by a new line. but for multiples of three
- * print Fizz instead of the number and for the multiples
- * of five print Buzz. For numbers which are multiples
- * of both three and five print FizzBuzz
+ * for multiples of three print Fizz instead of the number
+ * and for the multiples of five print Buzz. For numbers
+ * which are multiples of both three and five print FizzBuzz
  *
  * Return: 0 Always (Success)
  */
@@ -34,6 +33,7 @@ int main(void)
 		{
 			printf("%d", n);
 		}
+		
 		if (n == 100)
 		{
 			break;
@@ -41,6 +41,6 @@ int main(void)
 		printf(" ");
 	}
 	printf("\n");
-
+	
 	return (0);
 }
