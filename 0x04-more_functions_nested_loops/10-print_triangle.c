@@ -4,24 +4,24 @@
 /**
  * print_triangle - draw a triangle on the terminal
  * by '#' n times, using _putchar
- * @n: integer parameter
+ * @size: integer parameter
  * _putchar - print character
  */
-void print_triangle(int n)
+void print_triangle(int size)
 {
 	int i, j;
 
-	if (n <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		for (i = 0; i < n; i++)
+		for (i = 0; i < size; i++)
 		{
-			for (j = 0; j < n; j++)
+			for (j = 0; j < size; j++)
 			{
-				if (j < n - i)
+				if (j < size - i)
 				{
 					_putchar(' ');
 				} else
