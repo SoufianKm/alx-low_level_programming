@@ -20,4 +20,5 @@ void print_number(int n)
 		print_number(n);
 	}
 	_putchar('0' + n);
+	_putchar('\n');
 }
