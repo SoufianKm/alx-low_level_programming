@@ -11,8 +11,7 @@
 int main(void)
 {
 	int prime_factor = 0, i = 2;
-
-       	long n = 612852475143;
+	long n = 612852475143;
 	
 	do {
 		if (n % i == 0)
