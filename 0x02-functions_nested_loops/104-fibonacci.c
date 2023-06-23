@@ -17,10 +17,12 @@ int main(void)
 	while (counter <= 98)
 	{
 		res = previous_nbr + current_nbr;
+	
 		if (res < 0)
-			res *= (-1);
-		printf("%ld", res);
-
+			printf("%ld", res * (-1));
+		else
+			printf("%ld", res);
+		
 		if (counter <= 97)
 			printf(", ");
 
