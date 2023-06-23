@@ -11,7 +11,7 @@
  */
 int main(void)
 {
-	unsigned long long previous_nbr = 0, current_nbr = 1, res;
+	unsigned long previous_nbr = 0, current_nbr = 1, res;
 	int counter = 0;
 
 	while (counter <= 98)
