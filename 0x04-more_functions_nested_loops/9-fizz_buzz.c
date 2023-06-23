@@ -4,9 +4,11 @@
 /**
  * main - Entry point
  *
- * this program should print number
- * from 0 to 100 replacing all numbers
- * divised by 3 with Fizz and by 5 with Buzz
+ * this program should print numbers
+ * from 0 to 100 for :
+ * numbers divided by 3 with Fizz
+ * numbers devided by 5 with Buzz
+ * numbers devided by 3 and 5 with FizzBuzz
  *
  * Return: 0 Always (Success)
  */
@@ -16,7 +18,6 @@ int main(void)
 
 	for (n = 1; n <= 100; n++)
 	{
-
 		if (n % 3 == 0 && n % 5 == 0)
 			printf("FizzBuzz");
 		else if(n % 3 == 0)
