@@ -17,7 +17,7 @@ int main(void)
 	while (counter <= 98)
 	{
 		res = previous_nbr + current_nbr;
-		printf("%llu", res);
+		printf("%lu", res);
 
 		if (counter <= 97)
 			printf(", ");
