@@ -33,7 +33,7 @@ int main (void)
 			i++;
 		}
 	} while (n > 1);
-	printf("(%d)\n", p_f);
+	printf("%d\n", p_f);
 	
 	return (0);
 }
