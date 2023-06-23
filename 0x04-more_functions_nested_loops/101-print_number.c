@@ -19,6 +19,6 @@ void print_number(int n)
 		n /= 10;
 		print_number(n);
 	}
+
 	_putchar('0' + n);
-	_putchar('\n');
 }
