@@ -19,7 +19,6 @@ int main (void)
 		{
 			n /= i;
 		}
-	
 		if (i > p_f)
 		{
 			p_f = i;
