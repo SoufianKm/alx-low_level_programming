@@ -11,13 +11,13 @@
  */
 int main(void)
 {
-	unsigned long previous_nbr = 0, current_nbr = 1, res;
+	unsigned long long previous_nbr = 0, current_nbr = 1, res;
 	int counter = 0;
 
 	while (counter <= 98)
 	{
 		res = previous_nbr + current_nbr;
-		printf("%lu", res);
+		printf("%llu", res);
 
 		if (counter <= 97)
 			printf(", ");
