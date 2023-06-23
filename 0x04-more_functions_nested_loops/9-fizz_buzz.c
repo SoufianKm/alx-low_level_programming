@@ -6,9 +6,9 @@
  *
  * this program should print numbers
  * from 0 to 100 for :
- * numbers divided by 3 with Fizz
- * numbers devided by 5 with Buzz
- * numbers devided by 3 and 5 with FizzBuzz
+ * numbers divided by 3 will replaced with Fizz
+ * numbers devided by 5 will replaced with Buzz
+ * numbers devided by 3 and 5 will replaced with FizzBuzz
  *
  * Return: 0 Always (Success)
  */
@@ -26,7 +26,6 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", n);
-
 		if (n < 100)
 			printf(" ");
 	}
