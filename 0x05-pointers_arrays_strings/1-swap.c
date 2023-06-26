@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * swa_int - swaps values of two parameters
- * @a : integer parameter
- * @b : integer parameter
+ * swap_int - swaps values of two parameters
+ * @a : pointer integer parameter
+ * @b : pointer integer parameter
  */
 void swap_int(int *a, int *b)
 {
