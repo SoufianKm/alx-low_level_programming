@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * _strcpy -cpoy string pointed by src
+ * _strcpy - cpoy string pointed by src
  * @dest : pointer char parameter
  * @src : pointer char parameter
- * Return : value pointed to dest
+ * Return: the pointer to dest
  */
 char *_strcpy(char *dest, char *src)
 {
