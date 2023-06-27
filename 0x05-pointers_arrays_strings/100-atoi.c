@@ -7,20 +7,32 @@
 /**
  * _atoi - convert string to an int
  * @s : pointer char parameter
+ * Return: number converted, 0 if no number digit found
  */
 int _atoi(char *s)
 {
-	int i, l, res = 0;
+	int i, l, res = 0, sign = 1;
 
-	l = strlen(s);
-	for (i = 0; i <=l; i++)
+	l = strlen(s) - 1;
+	for (i = 0; i <= l; i++)
 	{
-		if (((s[i] == '-') && isdigit(s[i + 1])) || isdigit(s[i]))
+		if (isdigit(s[i]))
 		{
 			res = atoi(&s[i]);
 			break;
 		}
+		
+		if (i == 0 && !isspace(s[i]) && s[i] == '-')
+			sign = -sign;
+		else
+			sign =  sign;
+		
+		
+		if (!isspace(s[i + 1]) && s[i + 1] == '-')
+			sign *= (-1);
+		else if (!isspace(s[i + 1]) && s[i + 1] == '+')
+			sign *= 1;
 	}
 
-			return (res);
+	return (res * sign);
 }
