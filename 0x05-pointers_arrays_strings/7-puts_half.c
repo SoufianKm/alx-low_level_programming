@@ -18,8 +18,6 @@ void puts_half(char *str)
 		counter++;
 	}
 
-	printf("%d\n", counter);
-
 	for (i = counter; i < l ;i++)
 		_putchar(str[i]);
 
