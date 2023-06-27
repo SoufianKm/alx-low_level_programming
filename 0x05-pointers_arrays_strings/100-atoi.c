@@ -18,7 +18,7 @@ int _atoi(char *s)
 	{
 		if (isdigit(s[i]))
 		{
-			res = atoi(&s[i]);
+			res = atoi(&s[i]) * sign;
 			break;
 		}
 		
@@ -27,12 +27,11 @@ int _atoi(char *s)
 		else
 			sign =  sign;
 		
-		
 		if (!isspace(s[i + 1]) && s[i + 1] == '-')
 			sign *= (-1);
 		else if (!isspace(s[i + 1]) && s[i + 1] == '+')
 			sign *= 1;
 	}
 
-	return (res * sign);
+	return (res);
 }
