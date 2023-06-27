@@ -11,27 +11,24 @@
  */
 int _atoi(char *s)
 {
-	int i, l, res = 0, sign = 1;
+	int i, l, sign = 1;
 
 	l = strlen(s) - 1;
 	for (i = 0; i <= l; i++)
 	{
 		if (isdigit(s[i]))
-		{
-			res = atoi(&s[i]) * sign;
 			break;
-		}
-		
+
 		if (i == 0 && !isspace(s[i]) && s[i] == '-')
 			sign = -sign;
 		else
 			sign =  sign;
-		
+
 		if (!isspace(s[i + 1]) && s[i + 1] == '-')
 			sign *= (-1);
 		else if (!isspace(s[i + 1]) && s[i + 1] == '+')
 			sign *= 1;
 	}
 
-	return (res);
+	return (atoi(&s[i]) * sign);
 }
