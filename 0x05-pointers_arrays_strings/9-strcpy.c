@@ -3,7 +3,8 @@
 
 /**
  * _strcpy -cpoy string pointed by src
- * @s : pointer char parameter
+ * @dest : pointer char parameter
+ * @src : pointer char parameter
  */
 char *_strcpy(char *dest, char *src)
 {
