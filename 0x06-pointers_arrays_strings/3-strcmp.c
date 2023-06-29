@@ -5,10 +5,9 @@
  * _strcmp - compare two strings
  * @s1: pointer char parameter
  * @s2: pointer char parameter
- * Return: resulting string dest
+ * Return: return integer value
  */
-char *_strcmp(char *s1, char *s2)
+int *_strcmp(char *s1, char *s2)
 {
-	dest = strcmp(s1, s2);
-	return (dest);
+	return (strcmp(s1, s2));
 }
