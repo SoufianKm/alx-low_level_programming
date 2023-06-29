@@ -6,6 +6,7 @@
  * using at most n bytes from src
  * @dest: pointer char parameter
  * @src: pointer char parameter
+ * @n: integer parameter
  * Return: resulting string dest
  */
 char *_strncat(char *dest, char *src, int n)
