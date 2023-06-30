@@ -20,7 +20,8 @@ char *cap_string(char *str)
 				str[i] -= 32;
 			}
 			i++;
-		} else
+		}
+		else
 		{
 			while (sp[j] != '\0')
 			{
@@ -29,7 +30,8 @@ char *cap_string(char *str)
 					if (str[i + 1] == ' ')
 					{
 						k = i + 2;
-					} else
+					}
+					else
 					{
 						k = i + 1;
 					}
@@ -40,7 +42,8 @@ char *cap_string(char *str)
 					}
 
 					break;
-				} else
+				}
+				else
 				{
 					j++;
 				}
