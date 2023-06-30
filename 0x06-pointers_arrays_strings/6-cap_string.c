@@ -25,12 +25,16 @@ char *cap_string(char *str)
 				if (str[i] == sp[j])
 				{
 					if (str[i + 1] == ' ')
+					{
 						k = i + 2;
-					else
+					} else
+					{
 						k = i + 1;
+					}
 
 					if (str[k] >= 'a' && str[k] <= 'z')
 						str[k] -= 32;
+
 					break;
 				} else
 					j++;
