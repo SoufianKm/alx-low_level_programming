@@ -40,7 +40,6 @@ char *cap_string(char *str)
 					{
 						str[k] -= 32;
 					}
-
 					break;
 				}
 				else
@@ -52,6 +51,5 @@ char *cap_string(char *str)
 			i++;
 		}
 	}
-
 	return (str);
 }
