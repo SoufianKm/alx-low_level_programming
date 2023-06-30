@@ -48,7 +48,6 @@ char *cap_string(char *str)
 					j++;
 				}
 			}
-
 			j = 0;
 			i++;
 		}
