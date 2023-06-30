@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strcmp - changes all lowercase letters of a string to uppercase
+ * string_toupper - changes all lowercase letters of a string to uppercase
  * @str: pointer char parameter
  * Return: string in uppercase
  */
