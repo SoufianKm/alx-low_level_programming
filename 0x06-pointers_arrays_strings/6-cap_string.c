@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * cap_string - capitalizes all words of a string.
+ * cap_string - capitalizes all words of a string
  * @str: pointer char parameter
  * Return: all words of string capitalised
  */
@@ -45,6 +45,7 @@ char *cap_string(char *str)
 					j++;
 				}
 			}
+
 			j = 0;
 			i++;
 		}
