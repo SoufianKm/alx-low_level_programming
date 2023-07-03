@@ -6,10 +6,10 @@
  * @haystack: char pointer parameter
  * @needle: char pointer parameter
  * Return: pointer to the beginning of the located
- * substring, or NULL if the substring is not found.
+ * substring, NULL if the substring is not found.
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *h = haystack;
-	return (strstr(h, needle));
+	haystack = strstr(haystack, needle);
+	return (haystack);
 }
