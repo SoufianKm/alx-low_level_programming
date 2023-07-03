@@ -3,7 +3,7 @@
 
 /**
  * print_diagsums - prints the sum of the two diagonals of a square matrix of integers.
- * @a: mutlidimensional array of integers parameter
+ * @a: pointer integer parameter
  * @size: integer parameter
  */
 void print_diagsums(int *a, int size)
