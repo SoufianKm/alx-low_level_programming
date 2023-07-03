@@ -6,8 +6,8 @@
  * @dest: char pointer parameter
  * @src: char pointer parameter
  * @n: unsigned int parameter
- * Return: pointer to the first occurrence of the character c in the string s
- *         NULL if the character is not found
+ * Return: pointer to the first occurrence of the character c
+ * in the string s, NULL if the character is not found
  */
 char *_strchr(char *s, char c)
 {
