@@ -4,8 +4,7 @@
 /**
  * _strchr - locate a character in a string
  * @dest: char pointer parameter
- * @src: char pointer parameter
- * @n: unsigned int parameter
+ * @src: char parameter
  * Return: pointer to the first occurrence of the character c
  * in the string s, NULL if the character is not found
  */
