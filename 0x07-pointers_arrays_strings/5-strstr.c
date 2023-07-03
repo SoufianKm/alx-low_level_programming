@@ -11,9 +11,19 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *res;
+	while (haystack != '\0')
+	{
+		char *h = haystack, *n = needle;
 
-	res = strstr(haystack, needle);
+		if (*n == *h && *n != '\0')
+		{
+			h++;
+			n++;
+		}
 
-	return (res);
+		if (*n == '\0')
+			return (haystack);
+	}
+
+	return (0);
 }
