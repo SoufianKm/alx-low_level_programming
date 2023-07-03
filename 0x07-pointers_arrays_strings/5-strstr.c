@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * _strstr - locate a substring 
+ * _strstr - finds the first occurrence of the substring needle in the string haystack.
  * @haystack: char pointer parameter
  * @needle: char pointer parameter
  * Return: pointer to the beginning of the located
@@ -10,6 +10,5 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	haystack = strstr(haystack, needle);
-	return (haystack);
+	return (strstr(haystack, needle));
 }
