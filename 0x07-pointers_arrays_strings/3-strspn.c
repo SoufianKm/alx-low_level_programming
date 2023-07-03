@@ -8,9 +8,11 @@
  * Return: the number of bytes in the initial
  * segment of s which consist only of bytes from accept
  */
-char _strspn(char *s, char *accept)
+int _strspn(char *s, char *accept)
 {
-	s = strspn(s, accept);
+	unsigned int l = 0;
 
-	return (s);
+	l = strspn(s, accept);
+
+	return (l);
 }
