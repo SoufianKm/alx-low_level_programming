@@ -8,8 +8,8 @@
  * @n: unsigned int parameter
  * Return: pointer to dest
  */
-char *_memcpy(char *dest, char src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	dest = memcpy(dest, src ,n);
+	dest = memcpy(dest, src, n);
 	return (dest);
 }
