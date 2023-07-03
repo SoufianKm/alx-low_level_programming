@@ -11,14 +11,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	if (s != null)
-	{
-		s = strchr(s, c);
-	}
-	else
-	{
-		s = null;
-	}
+	s = strchr(s, c);
 
 	return (s);
 }
