@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * _strlen_recursion - return length of a string
+ * _strlen_recursion - count the length of a string
  * @s: pointer char parameter
+ * Return: length of string
  */
 int _strlen_recursion(char *s)
 {
