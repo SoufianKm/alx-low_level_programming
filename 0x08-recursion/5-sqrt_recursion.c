@@ -9,19 +9,16 @@
  */
 int calculate_sqrt(int i, int n)
 {
-	if (n < 0)
+	if (n < 0 || i < 0)
 	{
 		return (-1);
 	}
-	while (i * i != n)
-	{
-		if (i < 0)
-		{
-			break;
-		}
-		i--;
-	}
 
+	if (i * i != n)
+	{
+		i--;
+		return (calculate_sqrt(i, n));
+	}
 	return (i);
 }
 
