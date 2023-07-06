@@ -12,6 +12,9 @@ int calculate_sqrt(int i, int n)
 	if (n < 0 || i < 0)
 	{
 		return (-1);
+	} else if (n == 1)
+	{
+		return (1);
 	}
 
 	if (i * i != n)
