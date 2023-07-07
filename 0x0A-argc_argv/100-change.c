@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
 {
 	int res = 0;
 
+
 	if (argc != 2)
 	{
 		printf("Error\n");
