@@ -3,13 +3,12 @@
 
 /**
  * res_coin - calculate the min number of coins
- * @min: results of calcualtion
  * @c: coin given
  * Return: 1 if coin equal to 1, else returns the min
  */
-int res_coin(int min, int c)
+int res_coin(int c)
 {
-	int i, coin[5] = {25, 10, 5, 2, 1};
+	int i, res = 0, coin[5] = {25, 10, 5, 2, 1};
 
 	if (c == 1)
 		return (1);
@@ -18,20 +17,19 @@ int res_coin(int min, int c)
 	{
 		if (c >= coin[i])
 		{
+			res += c / coin[i];
 			if (c % coin[i] == 0)
 			{
-				min += c / coin[i];
 				break;
 			}
 			else
 			{
-				min++;
 				c %= coin[i];
 			}
 		}
 	}
 
-	return (min);
+	return (res);
 
 }
 /**
@@ -59,7 +57,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			res = res_coin(res, atoi(argv[argc - 1]));
+			res = res_coin(atoi(argv[argc - 1]));
 			printf("%d\n", res);
 		}
 	}
