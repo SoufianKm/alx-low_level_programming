@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+
 /**
  * main - Entry point
  * @argc: size of array
@@ -14,28 +15,30 @@ int main(int argc, char *argv[])
 	int i;
 
 	if (argc < 2)
-	{
 		printf("%d\n", res);
-		return (0);
-	}
 	else
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(*argv[i]))
+			unsigned long int j = 0;
+
+			while (j < strlen(argv[i]))
 			{
-				if (atoi(argv[i]) < 0)
+				if (!isdigit(argv[i][j]))
 				{
 					printf("Error\n");
-					return (0);
+					return (1);
 				}
-				res += atoi(argv[i]);
+
+				j++;
 			}
-			else
+
+			if (atoi(argv[i]) < 0)
 			{
 				printf("Error\n");
-				return (1);
+				return (0);
 			}
+			res += atoi(argv[i]);
 		}
 		printf("%d\n", res);
 	}
