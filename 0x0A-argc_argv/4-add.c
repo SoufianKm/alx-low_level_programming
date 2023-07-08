@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	if (argc < 2)
 	{
 		printf("%d\n", res);
+		return (0);
 	}
 	else
 	{
