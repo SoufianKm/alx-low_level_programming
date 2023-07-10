@@ -20,5 +20,6 @@ char *create_array(unsigned int size, char c)
 	while (i++ < size)
 		a[i] = c;
 
+	free(a);
 	return (a);
 }
