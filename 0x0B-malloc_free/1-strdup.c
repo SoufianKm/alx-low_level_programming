@@ -29,7 +29,7 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	res[i] = '\0';
+	res[l] = '\0';
 
 	return (res);
 }
