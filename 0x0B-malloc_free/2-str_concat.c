@@ -57,7 +57,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l = 0;
 
 	if (s1 == NULL && s2 == NULL)
-		return ("");
+		return ('\0');
 	else if (s1 == NULL && s2 != NULL)
 	{
 		l += strlen(s2);
