@@ -37,7 +37,6 @@ char *argstostr(int ac, char **av)
 		res[k] = '\n';
 		k++;
 	}
-	free(res);
 
 	return (res);
 }
