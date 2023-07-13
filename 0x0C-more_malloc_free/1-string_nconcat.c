@@ -7,7 +7,8 @@
  * @s1: first string
  * @s2: seconde string
  * @n: number of bytes from s2 to concatenates to s1
- * Return: pointer to resulting string
+ * Return: pointer to resulting string, NULL if s1 or
+ * s2 is NULL or program fail
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
