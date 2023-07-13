@@ -6,7 +6,7 @@
  * string_nconcat - concatenates two strings from n number
  * @s1: first string
  * @s2: seconde string
- * @n: number of characters from s2
+ * @n: number of characters of s2
  * Return: NULL if s1 or s2 is NULL, else return the n string
  * from s2 concatenated with s1
  */
@@ -16,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int l = 0, i, j;
 
 	if (s1 == NULL || s2 == NULL)
-		return ('\0');
+		return ("\0");
 
 	l += strlen(s1);
 	if (n <= strlen(s2))
