@@ -6,9 +6,8 @@
  * string_nconcat - concatenates two strings from n number
  * @s1: first string
  * @s2: seconde string
- * @n: number of characters of s2
- * Return: NULL if s1 or s2 is NULL, else return the n string
- * from s2 concatenated with s1
+ * @n: number of bytes from s2 to concatenates to s1
+ * Return: pointer to resulting string 
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -25,9 +24,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l2++;
 
 	if (n < l2)
+	{
 		l += l1 + n;
+	}
 	else
+	{
+		n = l2;
 		l += l1 + l2;
+	}
 
 	res = malloc(sizeof(char) * (l + 1));
 
@@ -39,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i] != '\0'; i++)
 		res[i] = s1[i];
 
-	for (j = 0; s2[j] != '\0'; j++)
+	for (j = 0; j < n; j++)
 	{
 		res[i] = s2[j];
 		i++;
