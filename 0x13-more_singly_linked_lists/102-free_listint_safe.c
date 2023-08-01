@@ -5,26 +5,25 @@
  * @head: Pointer to the first node in the linked list.
  * Return: Number of elements freed.
  */
-size_t free_listint_safe(listint_t **head)
+size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	listint_t *current, *next;
+	listint_t *current, *temp;
 
-	if (!head)
+	if (!h || !*h)
 		return (0);
 
-	current = *head;
+	current = *h;
 	while (current)
 	{
-		next = current->next;
+		temp = current->next;
 		free(current);
-		current = next;
 		count++;
-		if (current >= next)
+		if (current >= temp)
 			break;
+		current = temp;
 	}
 
-	*head = NULL;
+	*h = NULL;
 	return (count);
 }
-
