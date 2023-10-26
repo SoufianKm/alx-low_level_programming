@@ -2,7 +2,8 @@
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int
- * @b - char parameter
+ * @b: binary parameter
+ *
  * Return: converted number, 0 if NULL or there is one or more chars
  * in the string that is not 1 or 0
  */
