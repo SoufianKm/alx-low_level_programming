@@ -241,7 +241,7 @@ void print_entry(Elf64_Ehdr h)
  *
  * Return: 0 Always success
  */
-int main(int ac,char **av)
+int main(int ac, char **av)
 {
 	int fd;
 	Elf64_Ehdr e;
@@ -259,8 +259,9 @@ int main(int ac,char **av)
 
 	if (e.e_ident[0] == 0x7f && e.e_ident[1] == 'E' && e.e_ident[2] == 'L'
 && e.e_ident[3] == 'F')
+	{
 		printf(ELF_HEADER);
-	else
+	} else
 		dprintf(STDERR_FILENO, ERR_NOTELF, av[1]), exit(98);
 
 	print_magic(e);
