@@ -31,7 +31,7 @@ int main(int ac, char **av)
 	if (to_fd == -1)
 		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 
-	while ((b = read(from_fd, read_buf_size, READ_BUF_SIZE) > b))
+	while ((b = read(from_fd, read_buf_size, READ_BUF_SIZE)) > 0)
 		if (write(to_fd, read_buf_size, b) != b)
 			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 
