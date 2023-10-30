@@ -1,13 +1,7 @@
 #include "main.h"
 
-#define USAGE "Usage: elf_header elf_filename"
-#define ERR_NOTOPEN "Can't open the file: %s\n"
-#define ERR_NOTREAD "Can't read the file: %s\n"
-#define ERR_CLOSING_FILE "Error closing file descriptor: %s\n"
-#define ERR_NOTELF "NOT ELF file: %s\n"
-#define ELF_HEADER "ELF HEADER:\n"
-
 void print_osabi_more(Elf64_Ehdr h);
+
 /**
  * print_magic - prints ELF magic bytes
  * @h: ELF header
@@ -42,7 +36,6 @@ void print_class(Elf64_Ehdr h)
 	}
 	printf("\n");
 }
-
 
 /**
  * print_data - print ELF data
@@ -233,13 +226,12 @@ void print_entry(Elf64_Ehdr h)
 	}
 }
 
-
 /**
  * main - Entry point
  * @ac: size of arguments
  * @av: list of arguments
  *
- * Return: 0 Always success
+ * Return: 0 on success, Always
  */
 int main(int ac, char **av)
 {
@@ -248,21 +240,21 @@ int main(int ac, char **av)
 	ssize_t b;
 
 	if (ac != 2)
-		dprintf(STDERR_FILENO, USAGE), exit(98);
+		dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
 	fd = open(av[2], O_RDONLY);
 	if (fd == -1)
-		dprintf(STDERR_FILENO, ERR_NOTOPEN, av[1]), exit(98);
+		dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]), exit(98);
 
 	b = read(fd, &e, sizeof(e));
 	if (b < 1 || b != sizeof(e))
-		dprintf(STDERR_FILENO, ERR_NOTREAD, av[1]), exit(98);
+		dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1]), exit(98);
 
 	if (e.e_ident[0] == 0x7f && e.e_ident[1] == 'E' && e.e_ident[2] == 'L'
 && e.e_ident[3] == 'F')
 	{
-		printf(ELF_HEADER);
+		printf("ELF header\n");
 	} else
-		dprintf(STDERR_FILENO, ERR_NOTELF, av[1]), exit(98);
+		dprintf(STDERR_FILENO, "Not ELF file: %s\n", av[1]), exit(98);
 
 	print_magic(e);
 	print_class(e);
