@@ -27,13 +27,13 @@ void print_class(Elf64_Ehdr h)
 	{
 		case ELFCLASS64:
 			printf("ELF64");
-			break;
+		break;
 		case ELFCLASS32:
 			printf("ELF32");
-			break;
+		break;
 		case ELFCLASSNONE:
 			printf("none");
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -49,13 +49,13 @@ void print_data(Elf64_Ehdr h)
 	{
 		case ELFDATA2MSB:
 			printf("2's complement, big endian");
-			break;
+		break;
 		case ELFDATA2LSB:
 			printf("2's complement, little endian");
-			break;
+		break;
 		case ELFDATANONE:
 			printf("none");
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -71,10 +71,11 @@ void print_version(Elf64_Ehdr h)
 	{
 		case EV_CURRENT:
 			printf(" (current)");
-			break;
+		break;
 		case EV_NONE:
 			printf("%s", "");
-			break;
+		break;
+		break;
 	}
 	printf("\n");
 }
@@ -90,34 +91,34 @@ void print_osabi(Elf64_Ehdr h)
 	{
 		case ELFOSABI_NONE:
 			printf("UNIX - System V");
-			break;
+		break;
 		case ELFOSABI_HPUX:
 			printf("UNIX - HP-UX");
-			break;
+		break;
 		case ELFOSABI_NETBSD:
 			printf("UNIX - NetBSD");
-			break;
+		break;
 		case ELFOSABI_LINUX:
 			printf("UNIX - Linux");
-			break;
+		break;
 		case ELFOSABI_SOLARIS:
 			printf("UNIX - Solaris");
-			break;
+		break;
 		case ELFOSABI_AIX:
 			printf("UNIX - AIX");
-			break;
+		break;
 		case ELFOSABI_IRIX:
 			printf("UNIX - IRIX");
-			break;
+		break;
 		case ELFOSABI_FREEBSD:
 			printf("UNIX - FreeBSD");
-			break;
+		break;
 		case ELFOSABI_TRU64:
 			printf("UNIX - TRU64");
-			break;
+		break;
 		default:
 			print_osabi_more(h);
-			break;
+		break;
 	}
 	printf("\n");
 }
@@ -132,19 +133,19 @@ void print_osabi_more(Elf64_Ehdr h)
 	{
 		case ELFOSABI_MODESTO:
 			printf("Novell - modesto");
-			break;
+		break;
 		case ELFOSABI_OPENBSD:
 			printf("UNIX - OpenBSD");
-			break;
+		break;
 		case ELFOSABI_STANDALONE:
 			printf("Standalone App");
-			break;
+		break;
 		case ELFOSABI_ARM:
 			printf("ARM");
-			break;
+		break;
 		default:
 			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
-			break;
+		break;
 	}
 }
 
@@ -174,22 +175,22 @@ void print_type(Elf64_Ehdr h)
 	{
 		case ET_NONE:
 			printf("None (None)");
-			break;
+		break;
 		case ET_REL:
 			printf("REL (Relocatable file)");
-			break;
+		break;
 		case ET_EXEC:
 			printf("EXEC (Excutable file)");
-			break;
+		break;
 		case ET_DYN:
 			printf("DYN (Shared object file)");
-			break;
+		break;
 		case ET_CORE:
 			printf("CORE (Core file)");
-			break;
+		break;
 		default:
 			printf("<unknown>: %x", p[i]);
-			break;
+		break;
 	}
 	printf("\n");
 }
