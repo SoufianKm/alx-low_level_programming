@@ -7,13 +7,13 @@ void print_osabi_more(Elf64_Ehdr h);
  * print_magic - prints ELF magic bytes
  * @h: ELF header
  */
-void print_magic(Elf64_Edhr h)
+void print_magic(Elf64_Ehdr h)
 {
 	int i;
 
 	printf(" MAGIC:  ");
 	for (i = 0; i < EI_NIDENT; i++)
-		printf("%2.2x%s", h.e_ident[i], i == EI_IDENT - 1 ? "\n" : " ");
+		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
 
 /**
@@ -42,7 +42,7 @@ void print_class(Elf64_Ehdr h)
  * print_data - print ELF data
  * @h: ELF header
  */
-void print_class(Elf64_Ehdr h)
+void print_data(Elf64_Ehdr h)
 {
 	printf(" DATA:                      ");
 	switch (h.e_ident[EI_DATA])
@@ -85,7 +85,7 @@ void print_version(Elf64_Ehdr h)
  */
 void print_osabi(Elf64_Ehdr h)
 {
-	print(" OS/ABI: .                     ");
+	printf(" OS/ABI:                       ");
 	switch (h.e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE:
@@ -123,7 +123,7 @@ void print_osabi(Elf64_Ehdr h)
 }
 
 /**
- * print_osabi - print more ELF OS/ABI
+ * print_more_osabi - print more ELF OS/ABI
  * @h: ELF header
  */
 void print_more_osabi(Elf64_Ehdr h)
@@ -143,7 +143,7 @@ void print_more_osabi(Elf64_Ehdr h)
 			printf("ARM");
 			break;
 		default:
-			printf("<unknown: %x>", h.e_ident[EL_OSABI]);
+			printf("<unknown: %x>", h.e_ident[EI_OSABI]);
 			break;
 	}
 }
@@ -158,7 +158,7 @@ void print_abiversion(Elf64_Ehdr h)
 }
 
 /**
- * print_type - printf ELF type
+ * print_type - print ELF type
  * @h: ELF header
  */
 void print_type(Elf64_Ehdr h)
@@ -182,7 +182,7 @@ void print_type(Elf64_Ehdr h)
 			printf("EXEC (Excutable file)");
 			break;
 		case ET_DYN:
-			pritf("DYN (Shared object file)");
+			printf("DYN (Shared object file)");
 			break;
 		case ET_CORE:
 			printf("CORE (Core file)");
@@ -195,7 +195,7 @@ void print_type(Elf64_Ehdr h)
 }
 
 /**
- * print_entry - print ELF Entry
+ * print_entry - print ELF entry
  * @h: ELF header
  */
 void print_entry(Elf64_Ehdr h)
@@ -266,7 +266,7 @@ int main(int ac, char **av)
 	print_type(e);
 	print_entry(e);
 	if (close(fd))
-		dprintf(STDERR_FILENO, ERR_CLOSING_FILE, fd), exit(98);
+		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd), exit(98);
 
 	return (0);
 }
