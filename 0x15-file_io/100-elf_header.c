@@ -123,10 +123,10 @@ void print_osabi(Elf64_Ehdr h)
 }
 
 /**
- * print_more_osabi - print more ELF OS/ABI
+ * print_osabi_more - print more ELF OS/ABI
  * @h: ELF header
  */
-void print_more_osabi(Elf64_Ehdr h)
+void print_osabi_more(Elf64_Ehdr h)
 {
 	switch (h.e_ident[EI_OSABI])
 	{
