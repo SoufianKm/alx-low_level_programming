@@ -11,7 +11,7 @@ void print_magic(Elf64_Ehdr h)
 {
 	int i;
 
-	printf(" MAGIC:  ");
+	printf(" Magic:  ");
 	for (i = 0; i < EI_NIDENT; i++)
 		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
@@ -22,7 +22,7 @@ void print_magic(Elf64_Ehdr h)
  */
 void print_class(Elf64_Ehdr h)
 {
-	printf(" CLASS:                      ");
+	printf(" Class:                      ");
 	switch (h.e_ident[EI_CLASS])
 	{
 		case ELFCLASS64:
@@ -44,7 +44,7 @@ void print_class(Elf64_Ehdr h)
  */
 void print_data(Elf64_Ehdr h)
 {
-	printf(" DATA:                      ");
+	printf(" Data:                      ");
 	switch (h.e_ident[EI_DATA])
 	{
 		case ELFDATA2MSB:
@@ -66,7 +66,7 @@ void print_data(Elf64_Ehdr h)
  */
 void print_version(Elf64_Ehdr h)
 {
-	printf(" VERSION:                     %d", h.e_ident[EI_VERSION]);
+	printf(" Version:                     %d", h.e_ident[EI_VERSION]);
 	switch (h.e_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
