@@ -95,7 +95,7 @@ void print_osabi(Elf64_Ehdr h)
 			printf("UNIX - HP-UX");
 			break;
 		case ELFOSABI_NETBSD:
-			printf("UNIX - NETBSD");
+			printf("UNIX - NetBSD");
 			break;
 		case ELFOSABI_LINUX:
 			printf("UNIX - Linux");
@@ -188,7 +188,7 @@ void print_type(Elf64_Ehdr h)
 			printf("CORE (Core file)");
 			break;
 		default:
-			printf("<unknown>. %x", p[i]);
+			printf("<unknown>: %x", p[i]);
 			break;
 	}
 	printf("\n");
