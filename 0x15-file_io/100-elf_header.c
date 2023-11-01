@@ -13,7 +13,7 @@ void print_magic(Elf64_Ehdr h)
 
 	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
-		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
+		printf("%02x", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
 
 /**
@@ -267,7 +267,7 @@ int main(int ac, char **av)
 		printf("ELF header\n");
 	} else
 	{
-		dprintf(STDERR_FILENO, "Not ELF file: %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Not an ELF file: %s\n", av[1]);
 		exit(98);
 	}
 
