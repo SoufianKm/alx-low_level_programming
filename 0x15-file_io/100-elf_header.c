@@ -265,7 +265,7 @@ int main(int ac, char **av)
 	b = read(fd, e, sizeof(Elf64_Ehdr));
 	if (b == -1)
 	{
-		free(e);	
+		free(e);
 		if (close(fd) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd);
