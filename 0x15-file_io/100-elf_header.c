@@ -235,7 +235,7 @@ void print_entry(Elf64_Ehdr h)
 int main(int ac, char **av)
 {
 	int fd;
-	Elf64_Ehdr e;
+	Elf64_Ehdr *e;
 	ssize_t b;
 
 	if (ac != 2)
