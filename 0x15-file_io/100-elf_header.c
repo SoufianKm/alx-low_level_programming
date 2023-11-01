@@ -13,7 +13,7 @@ void print_magic(Elf64_Ehdr h)
 
 	printf("  Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
-		printf("%02x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
+		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
 
 /**
@@ -71,9 +71,6 @@ void print_version(Elf64_Ehdr h)
 	{
 		case EV_CURRENT:
 			printf(" (current)");
-		break;
-		case EV_NONE:
-			printf("%s", "");
 		break;
 	}
 	printf("\n");
@@ -250,14 +247,14 @@ int main(int ac, char **av)
 	fd = open(av[2], O_RDONLY);
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't open file: %s\n", av[1]);
 		exit(98);
 	}
 
 	b = read(fd, &e, sizeof(e));
 	if (b < 1 || b != sizeof(e))
 	{
-		dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file: %s\n", av[1]);
 		exit(98);
 	}
 
