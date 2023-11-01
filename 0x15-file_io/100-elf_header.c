@@ -256,7 +256,7 @@ int main(int ac, char **av)
 
 	b = read(fd, &e, sizeof(e));
 	if (b < 1 || b != sizeof(e))
-	{	
+	{
 		dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1]);
 		exit(98);
 	}
