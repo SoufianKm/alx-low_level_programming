@@ -234,9 +234,8 @@ void print_entry(Elf64_Ehdr h)
  */
 int main(int ac, char **av)
 {
-	int fd;
+	int fd, b, i;
 	Elf64_Ehdr *e;
-	ssize_t b;
 
 	if (ac != 2)
 	{
@@ -244,39 +243,60 @@ int main(int ac, char **av)
 		exit(98);
 	}
 
-	fd = open(av[2], O_RDONLY);
+	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file: %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
 		exit(98);
 	}
 
-	b = read(fd, &e, sizeof(e));
-	if (b < 1 || b != sizeof(e))
+	e = malloc(sizeof(Elf64_Ehdr));
+	if (e == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file: %s\n", av[1]);
+		if (close(fd) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd);
+			exit(98);
+		}
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
 		exit(98);
 	}
 
-	if (e.e_ident[0] == 0x7f && e.e_ident[1] == 'E' && e.e_ident[2] == 'L'
-&& e.e_ident[3] == 'F')
+	b = read(fd, e, sizeof(Elf64_Ehdr));
+	if (b == -1)
 	{
-		printf("ELF header\n");
-	} else
-	{
-		dprintf(STDERR_FILENO, "Error: Not an ELF file: %s\n", av[1]);
+		free(e);	
+		if (close(fd) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd);
+			exit(98);
+		}
+		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", av[1]);
 		exit(98);
 	}
 
-	print_magic(e);
-	print_class(e);
-	print_data(e);
-	print_version(e);
-	print_osabi(e);
-	print_abiversion(e);
-	print_type(e);
-	print_entry(e);
-	if (close(fd))
+	for (i = 0; i < 4; i++)
+	{
+		if (e->e_ident[i] != 127 &&
+		    e->e_ident[i] != 'E' &&
+		    e->e_ident[i] != 'L' &&
+		    e->e_ident[i] != 'F')
+		{
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+			exit(98);
+		}
+	}
+
+	print_magic(*e);
+	print_class(*e);
+	print_data(*e);
+	print_version(*e);
+	print_osabi(*e);
+	print_abiversion(*e);
+	print_type(*e);
+	print_entry(*e);
+	free(e);
+	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd);
 		exit(98);
